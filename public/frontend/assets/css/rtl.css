@@ -2618,7 +2618,7 @@ element.style {
 }
 
 .header .navbar-brand img {
-  width: 110px;
+  width: 120px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2629,7 +2629,7 @@ element.style {
 
 @media (max-width: 767px) {
   .header .navbar-brand img {
-    width: 180px;
+    width: 130px;
   }
 }
 
@@ -3040,15 +3040,42 @@ element.style {
   background-repeat: no-repeat;
   height: auto;
   position: relative;
-  direction: rtl;
- 
+  direction: rtl;  ;
 }
 
-
+.hero-area .hero-slider .single-slider .img {
+  float: left; 
+  align-items: center;
+  width: 47%; 
+ }
+ .hero-area .hero-slider .single-slider .info {
+  float: right; 
+  align-items: center;
+  width: 47%; 
+  margin-top: 80px;
+  
+ }
+  
+.hero-area .hero-slider .single-slider .img img{
+  max-height: 350px;
+  max-width: 450px;
+}
 @media (max-width: 767px) {
   .hero-area .hero-slider .single-slider {
     position: relative;
   }
+  .hero-area .hero-slider .single-slider .img img{
+    max-height: 180px;
+    max-width: 400px;
+  }
+  .hero-area .hero-slider .single-slider .info h1 {
+font-size: 25px;
+    
+   }
+   .hero-area .hero-slider .single-slider .info span {
+    font-size: 15px;    
+        
+       }
 
   .hero-area .hero-slider .single-slider::before {
     position: absolute;
@@ -3085,8 +3112,10 @@ element.style {
 .hero-area .hero-slider .single-slider .content {
   padding: 2px 2px 2px 2px;
   position: relative;
-  
-  right: 0; 
+  display: contents;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox; 
   text-align: center; 
 
 }
@@ -3094,6 +3123,7 @@ element.style {
   padding: 1px;
   text-align: center;
   font-size: 20px;
+  padding-right:15px
 
 }
 .hero-area .hero-slider .single-slider .category-name{
@@ -3106,10 +3136,8 @@ element.style {
 .hero-area .hero-slider .single-slider .content .caty {
   width: 120px;
   height: 120px;
-  text-align: center;
-  padding: -3px;
-  margin-right: 25px;
-  display: inline-table;
+ text-align: center;
+ padding: 0px;
 
 
 }
@@ -3120,7 +3148,7 @@ element.style {
 
 }
 .hero-area .hero-slider .single-slider .content .caty h6{
-  font-size: 14px;
+  font-size: 11px;
   margin-top: 5px;
   color: #081828;
 }
@@ -3144,6 +3172,8 @@ element.style {
   .hero-area .hero-slider .single-slider .content .caty img{
     width: 3rem;
     height: 3rem;  
+  
+   
   }
   .hero-area .hero-slider .single-slider .content .caty {
     width: 4.2rem;
@@ -3154,6 +3184,17 @@ element.style {
   
   
   }
+
+  .hero-area .hero-slider .single-slider .img{
+  position: absolute;
+    z-index: 1;
+    width: 380px;
+  }
+  .hero-area .hero-slider .single-slider .content .info{
+    margin-top: 200px;
+    width: 380px;
+  }
+ 
 }
 
 .hero-area .hero-slider .single-slider .content h2 {
@@ -8030,7 +8071,7 @@ direction: rtl;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #081828;
+  color: #000;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -8054,7 +8095,7 @@ direction: rtl;
 	Footer CSS
 ========================================*/
 .footer {
-  background-color: #ff0050;
+  background-color: #000;
   position: relative;
   /* Single Footer */
   /* End Single Footer */

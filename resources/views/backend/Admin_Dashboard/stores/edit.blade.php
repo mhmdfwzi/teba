@@ -123,11 +123,11 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>{{ trans('stores_trans.Neighborhood') }}<span class="text-danger">*</span></label>
-                                <select name="neighborhood" id="" class="custom-select mr-sm-2" required>
+                                <label>{{ trans('stores_trans.city') }}<span class="text-danger">*</span></label>
+                                <select name="city" id="" class="custom-select mr-sm-2" required>
                                     <option disabled selected> اختار المنطقة </option>
                                 </select>
-                                @error('neighborhood')
+                                @error('city')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
