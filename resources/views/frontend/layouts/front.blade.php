@@ -8,7 +8,7 @@
     <meta name="description" content="{{ $title }}" />
     <meta name="keyword" content="{{ $title }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/logo.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/icon.ico') }}" />
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }} " />
