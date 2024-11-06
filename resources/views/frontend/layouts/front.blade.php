@@ -8,7 +8,7 @@
     <meta name="description" content="{{ $title }}" />
     <meta name="keyword" content="{{ $title }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/icon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/logo.ico') }}" />
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }} " />
@@ -133,7 +133,7 @@
                         <div class="menu-mobile-header">
                             <button type="button" class="menu-mobile-arrow"><i
                                     class="ion ion-ios-arrow-back"></i></button>
-                            <div class="menu-mobile-title">Tebaoptics</div>
+                            <div class="menu-mobile-title">scalechem</div>
                             <button type="button" class="menu-mobile-close"><i class="ion ion-ios-close"></i></button>
                         </div>
                         <ul class="menu-section" style="direction: rtl">
@@ -236,12 +236,16 @@
                             </div>
                         </li> -->
 
-                      
+                        
 
                         </ul>
                     </nav>
                     <div class="nav-social">
                         <ul>
+                            <li><button type="button" class="btn   " data-bs-toggle="modal"
+                                data-bs-target="#SearchModal">
+                                <i class="lni lni-search-alt"></i>
+                            </button></li>
                             <li>
                                 <a href="https://www.facebook.com/TEBA.OPTICS.BANHA"><i
                                         class="lni lni-facebook-filled"></i></a>
@@ -249,14 +253,12 @@
                             <li>
                                 <a href="javascript:void(0)"><i class="lni lni-youtube"></i></a>
                             </li>
+                           
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a>
+                                <a href="tel:+201005242818" target="_blank"><i class="lni lni-phone"></i></a>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)"><i class="lni lni-phone"></i></a>
-                            </li>
-                            <li> <i class="mdi mdi-phone-in-talk"></i> 01005242818 </li>
-
+                            
+                            
 
 
                         </ul>
@@ -267,10 +269,7 @@
 
                 <div class="navbar-cart">
                      <div class="wishlist" style="padding-right: 10px">
-                    <button type="button" class="btn   " data-bs-toggle="modal"
-                    data-bs-target="#SearchModal">
-                    <i class="lni lni-search-alt"></i>
-                </button></div>
+                    </div>
 
                     <x-frontend.cart-menu> </x-frontend.cart-menu>
                 </div>

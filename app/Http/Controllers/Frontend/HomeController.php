@@ -18,16 +18,17 @@ class HomeController extends Controller
         $main_categories = Category::where('status','=','active')-> where('parent_id', '=', null)->get();
         $sup_categories = Category::where('status','=','active')-> where('parent_id','!=','null')->get();
         $stores = Store::where('status','=','active')->get();
-        
+        $offers = Product::where('status', 'active')->where('offer',1)->take(8)->get();
+        $products_mostViewed = Product::orderBy('views', 'desc')->take(8)->get();
+    
 
 
-        $offers = Product::where('status', 'active')->where('offer',1)->take(12)->get();
         // get latest 8 products which status is active 
        $products = Product::with('category','store','reviews')
         ->active()
         ->inRandomOrder()
         ->latest()
-        ->take(12)
+        ->take(8)
         ->get();
 		
 		
@@ -52,7 +53,9 @@ class HomeController extends Controller
             'products',  
         'main_categories',
         'sup_categories',
-        'stores','offers'
+        'stores',
+        'offers',
+        'products_mostViewed'
             // ,'best_seller_products'
     ));
     }

@@ -27,7 +27,7 @@
                              <h3>ابق على تواصل معنا</h3>
                              <p class="phone">Phone: 01005242818</p>
                              <p class="mail">
-                                 <a href="mailto:support@tebaoptics.com">info@tebaoptics.com</a>
+                                 <a href="info@tebaoptics.com">info@tebaoptics.com</a>
                              </p>
                          </div>
                          <!-- End Single Widget -->
@@ -107,7 +107,7 @@
                              <li>
                                  <span>تابعنا على :</span>
                              </li>
-                             <li><a href="https://www.facebook.com/profile.php?id=100092454938621"><i
+                             <li><a href="https://www.facebook.com/TEBA.OPTICS.BANHA"><i
                                          class="lni lni-facebook-filled"></i></a></li>
                              <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
                              <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>

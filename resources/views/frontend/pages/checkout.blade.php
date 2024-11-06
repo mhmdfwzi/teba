@@ -123,7 +123,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12">
+                                            <div class="col-md-12" style="display: none">
                                                 <div class="single-form form-default">
                                                     {{-- <label>User Name</label> --}}
                                                     <div class="row">
@@ -151,18 +151,18 @@
                                                 <div class="single-form form-default">
                                                     {{-- <label>User Name</label> --}}
                                                     <div class="row">
-                                                        <select name="address[billing][neighborhood_id]"
+                                                        <select name="address[billing][city_id]"
                                                             id="destinationSelect"
                                                             class="custom-select mr-sm-2 form-control">
                                                             <option disabled selected>
-                                                                {{ trans('auth_trans.Choose_Neighborhood') }}
+                                                                {{ trans('auth_trans.Choose_city') }}
                                                             </option>
                                                             @foreach ($destinations as $destination)
-                                                                @if ($destination->rank == '3')
+                                                                @if ($destination->rank == '2')
                                                                     <option value="{{ $destination->id }}"
-                                                                        @if (Auth::check()) {{ Auth::user()->neighborhood->id == $destination->id ? 'selected' : '' }}
+                                                                        @if (Auth::check()) {{ Auth::user()->city->id == $destination->id ? 'selected' : '' }}
                                                                         @else
-                                                                            {{ old('address.billing.neighborhood_id') == $destination->id ? 'selected' : '' }} @endif>
+                                                                            {{ old('address.billing.city_id') == $destination->id ? 'selected' : '' }} @endif>
                                                                         {{ $destination->name }}
                                                                     </option>
                                                                 @endif
@@ -194,60 +194,10 @@
 
                                 </li>
 
-                                {{-- <li>
-                                    <h6 class="title collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsefive" aria-expanded="false"
-                                        aria-controls="collapsefive">Payment Info</h6>
-                                    <section class="checkout-steps-form-content collapse" id="collapsefive"
-                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="checkout-payment-form">
-                                                    <div class="single-form form-default">
-                                                        <label>Cardholder Name</label>
-                                                        <div class="form-input form">
-                                                            <input type="text" placeholder="Cardholder Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="single-form form-default">
-                                                        <label>Card Number</label>
-                                                        <div class="form-input form">
-                                                            <input id="credit-input" type="text"
-                                                                placeholder="0000 0000 0000 0000">
-                                                            <img src="assets/images/payment/card.png" alt="card">
-                                                        </div>
-                                                    </div>
-                                                    <div class="payment-card-info">
-                                                        <div class="single-form form-default mm-yy">
-                                                            <label>Expiration</label>
-                                                            <div class="expiration d-flex">
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="MM">
-                                                                </div>
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="YYYY">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="single-form form-default">
-                                                            <label>CVC/CVV <span><i
-                                                                        class="mdi mdi-alert-circle"></i></span></label>
-                                                            <div class="form-input form">
-                                                                <input type="text" placeholder="***">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="single-form form-default button">
-                                                        <button type="submit" class="btn">pay now</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </li> --}}
+                               
 
                                 <div class="single-form form-default button">
-                                    <button type="submit" class="btn">انهاء الطلب</button>
+                                    <button type="submit" class="btn">اتمام الشراء  </button>
                                 </div>
                             </ul>
                         </div>

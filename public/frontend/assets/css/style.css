@@ -129,7 +129,7 @@ video {
 @media only screen and (max-width:992px) {
     .container {
         padding: 0 1rem;
-        margin: 0 auto
+        margin: 15px auto
     }
 
 }
@@ -436,7 +436,7 @@ video {
         height: 1rem;
         border: none;
         outline: none;
-        margin-left: 1.25rem;
+        margin-left:  .25rem;
         background: 0 0;
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
@@ -730,7 +730,7 @@ video {
      }
      .header .nav-social {
 
-        display: none;
+         
     }
 
 }

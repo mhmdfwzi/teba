@@ -21,11 +21,7 @@
         <span class="category">     
             <a href="{{ route('shop_grid.index', ['categoryId' => $product->category->id]) }}">
             {{ $product->category->name }}
-        </a> من : 
-    
-         <a href="{{ route('shop_grid.indexStore', ['storeId' => $product->store->id]) }}">
-            {{ $product->store->name }}
-        </a></span>
+        </a>  </span>
          
 
 

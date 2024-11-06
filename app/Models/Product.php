@@ -44,7 +44,12 @@ class Product extends Model
             $product->slug = Str::slug($product->name);
         });
     }
-
+    //-----------------------------------------------views----------------------------------------
+    public function incrementViews() {
+        $this->views++;
+        $this->save();
+    }
+ 
     // -------------------------------------Relationships---------------------------------------------- //
 
     //// one-to-one relationship

@@ -35,7 +35,7 @@
                         <div class="register-form">
                             <div class="title" style="text-align: center">
                                 <h3>التسجيل فى طلب وظيفة</h3>
-                                <p>نتشرف بكونك احد اعضاء فريق على افندى مستقبلا</p>
+                                 
                             </div>
     
     
@@ -105,7 +105,7 @@
 
                                 <div class="col-md-12 col-sm-6">
                                     <div class="form-group">                                        
-                                        <input class="form-control" type="tel" name="phone"  
+                                        <input class="form-control" type="tel" name="phone"  style="text-align: right"
                                          placeholder="رقم تليفون متصل بالواتس اب "   required>
                                         @error('phone')
                                             <div class="alert alert-danger">
@@ -182,14 +182,7 @@
                                     <button class="btn" type="submit">تسجيل</button>
                                 </div>
     
-                                <p class="outer-link" style="text-align: center">
-                                   <p style="text-align: center"> تجري الرياح كما تجري سفينتنا  ***    نحن الرياح ونحن البحر والسـفـن
-
-                                    <p style="text-align: center">إن الذي يرتجي شيئاً بهمتــــــه    ***   يلقاه لو حاربتــــــه الإنس والجــن
-
-                                     <p style="text-align: center">فاقصد إلى قمــم الأشياء تدركها   ***   تجري الرياح كما رادت لها السفن
-    
-                                </p>
+                                
                             </form>
                         </div>
                     </div>

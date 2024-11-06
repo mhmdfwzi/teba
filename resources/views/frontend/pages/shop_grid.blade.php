@@ -62,47 +62,25 @@
 
 
                             @if (isset($categories))
-                                <div class="checkout-steps-form-style-1">
-                                    <ul id="accordionExample">
-
-                                        @foreach ($categories as $category)
-                                            @if ($category->parent_id === null)
-                                                <li>
-                                                    <h6 class="title collapsed" data-bs-toggle="collapse"
-                                                        data-bs-target="#x{{ $category->id }}" aria-expanded="false"
-                                                        aria-controls="x{{ $category->id }}">
-                                                        {{ $category->name }}
-                                                    </h6>
-                                                    <section class="checkout-steps-form-content collapse"
-                                                        id="x{{ $category->id }}" aria-labelledby="x{{ $category->id }}"
-                                                        data-bs-parent="#accordionExample">
-                                                        <div class="row">
-
-                                                            @if ($category->children->count() > 0)
-                                                                <ul class="list" style="margin-left: 10px;">
-                                                                    @foreach ($category->children as $child)
-                                                                        <li class="m-0">
-                                                                            <input type="checkbox"
-                                                                                value="{{ $child->id }}"
-                                                                                name="category[]" class="category"
-                                                                                @checked($category_id == $child->id)>
-                                                                            <label>{{ $child->name }}
-                                                                                ({{ $child->products()->count() }})
-                                                                            </label>
-                                                                        </li>
-                                                                    @endforeach
-                                                                </ul>
-                                                            @endif
-
-                                                        </div>
-                                                    </section>
-                                                </li>
-                                            @endif
-                                        @endforeach
 
 
-                                    </ul>
-                                </div>
+                               <!-- Start Brand Filter -->
+                        <div class="single-widget condition">
+                            <h3>Filter by Brand</h3>
+                            <ul class="list">
+                                @foreach ($categories as $category)
+                                    <li>
+                                        {{-- <input type="radio" class="brands" name="brand" value="{{ $brand->id }}"> --}}
+                                        <input type="checkbox" value="{{ $category->id }}" name="category[]"
+                                            class="category">
+                                        <label>
+                                            {{ $category->name }}
+                                        </label>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <!-- End Brand Filter -->
 
                             @endif
                         </div>
@@ -114,21 +92,7 @@
 
 
 
-                        <!-- Start stores Filter -->
-                        <div class="single-widget">
-                            <h3>All Stores </h3>
-                            <ul class="list">
-                                @foreach ($stores as $store)
-                                    <li>
-                                        <input type="checkbox" value="{{ $store->id }}" name="store[]" class="store"
-                                            @checked($store_id == $store->id)>
-                                        <label>{{ $store->name }}
-                                            {{-- ({{ $vendor->products()->count() }} ) --}}
-                                        </label>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
+                      
                         <!-- End stores Filter -->
 
 
@@ -157,13 +121,13 @@
                             <h3>Price Range</h3>
                             <div class="middle">
                                 <div id="multi_range">
-                                    <span id="left_value">0</span><span> ~ </span><span id="right_value">100000</span>
+                                    <span id="left_value">0</span><span> ~ </span><span id="right_value">10000</span>
                                 </div>
                                 <div class="multi-range-slider my-2">
                                     <input type="range" id="input_left" class="range_slider" min="0"
                                         max="5000" value="0" onmousemove="left_slider(this.value)">
                                     <input type="range" id="input_right" class="range_slider" min="5000"
-                                        max="100000" value="100000" onmousemove="right_slider(this.value)">
+                                        max="100000" value="100" onmousemove="right_slider(this.value)">
                                     <div class="slider">
                                         <div class="track"></div>
                                         <div class="range"></div>
@@ -279,10 +243,10 @@
                                         style="text-align: center;
                                     margin-top: 20px; ">
                                         <div class="col-md-12"
-                                            style=" 
+                                            style=" background-color: #30bb47;
                                         padding: 100px; ">
                                             <div class="d-flex  justify-content-center ">
-                                                <p style="color: #CC0C4C; font-size:25px; font-weight:bold"> لا توجد
+                                                <p style="color: white; font-size:25px; font-weight:bold"> لا توجد
                                                     منتجات</p>
                                             </div>
                                         </div>

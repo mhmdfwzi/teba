@@ -2549,15 +2549,20 @@ element.style {
   -ms-flex-align: center;
   align-items: center;
   direction: ltr;
+  margin-left: 100px;
 }
 
 @media (max-width: 767px) {
   .header .nav-social, .header .category_menu {
     position: relative;
     margin-top: -40px;
-    display: none;
+   
   }
-  
+  .header .navbar-cart {
+   
+    margin-left: 180px;
+    margin-top: -5px;
+  }
   .header .category_menu {
     display: none;
   }
@@ -2580,7 +2585,7 @@ element.style {
 
 .header .nav-social ul li {
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 .header .nav-social ul li:last-child {
@@ -2623,13 +2628,13 @@ element.style {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header .navbar-brand img {
-    width: 190px;
+    width: 200px;
   }
 }
 
 @media (max-width: 767px) {
   .header .navbar-brand img {
-    width: 130px;
+    width: 100px;
   }
 }
 
@@ -3047,26 +3052,24 @@ element.style {
   float: left; 
   align-items: center;
   width: 47%; 
- }
- .hero-area .hero-slider .single-slider .info {
-  float: right; 
-  align-items: center;
-  width: 47%; 
-  margin-top: 80px;
   
  }
+
   
 .hero-area .hero-slider .single-slider .img img{
   max-height: 350px;
   max-width: 450px;
 }
+
+
+
 @media (max-width: 767px) {
   .hero-area .hero-slider .single-slider {
     position: relative;
   }
   .hero-area .hero-slider .single-slider .img img{
-    max-height: 180px;
-    max-width: 400px;
+    max-height: 150px;
+    max-width: 350px;
   }
   .hero-area .hero-slider .single-slider .info h1 {
 font-size: 25px;
@@ -3805,7 +3808,7 @@ text-align: right;
     display: inline-block;
     text-align: right;
   }
-  
+ 
   .single-product .product-info .price .discount-price {
     margin: 0;
     color: #aaaaaa;
@@ -3816,8 +3819,70 @@ text-align: right;
     display: inline-block;
     text-align: right;
   }
+  .info .price .discount-price {
+    margin: 0;
+    color: #aaaaaa;
+    text-decoration: line-through;
+    font-weight: normal;
+    margin-right: 10px;
+    font-size: .8rem;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .info .price span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #05cc5f;
+    display: inline-block;
+    text-align: right;
+  }
+
+  
+  .hero-area .hero-slider .single-slider .info {
+    float: right; 
+    align-items: center;
+    width: 47%; 
+    margin-top: 40px;
+    min-height: 150px;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    padding-top: 10px;
+
+   }
+
+   .hero-area .hero-slider .single-slider .info .button {
+    margin-top: 10px;
+  }
+  
+  
 
 }
+.info{
+  width: 60%;
+  padding-top: 70px;
+  min-height: 350px;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 255), rgb(228, 97, 136));
+}
+.info .price .discount-price {
+  margin: 0;
+  color: #a50303;
+  text-decoration: line-through;
+  font-weight: normal;
+  margin-right: 10px;
+  font-size: .8rem;
+  display: inline-block;
+  text-align: right;
+  font-weight: 900;
+}
+
+.info .price span {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #009844;
+  display: inline-block;
+  text-align: right;
+}
+
 
 /*======================================
     Banner CSS
@@ -8071,7 +8136,7 @@ direction: rtl;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #000;
+  color: #081828;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -8095,7 +8160,7 @@ direction: rtl;
 	Footer CSS
 ========================================*/
 .footer {
-  background-color: #000;
+  background-color: #081828;
   position: relative;
   /* Single Footer */
   /* End Single Footer */

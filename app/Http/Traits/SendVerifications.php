@@ -18,11 +18,11 @@ trait SendVerifications
 
         // dd($phone_number ,$otp);
 
-        $url = 'https://api.ultramsg.com/instance62549/messages/chat';
+        $url = 'https://api.ultramsg.com/instance92960/messages/chat';
         $params = [
-            'token' => '0ggvbpzghlho2rq6',
+            'token' => 'ppqmpkzjiwqjeo1i',
             'to' => $phone_number,
-            'body' => 'كود تفعيل الحساب: ' . $otp . ' aliafandy نسعد بخدمتك', // Modify the message as needed
+            'body' => 'كود تفعيل الحساب: ' . $otp . ' scalechem نسعد بخدمتك', // Modify the message as needed
         ];
 
         $response = Http::post($url, $params);

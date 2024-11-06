@@ -8,7 +8,6 @@
                         <div class="row">
                                   <div class="col-lg-12 col-12">
                                             <div class="slider-head">
-                                                <div style="text-align:center"><h4>اخر العروض</h4></div>
                                                       <!-- Start Hero Slider -->
                                                       <div class="hero-slider">
                                                      
@@ -16,29 +15,42 @@
                                                                 @foreach ($offers as $offer)
                                                                 
                                                                 <div class="single-slider" style="padding-right:13px; ">
-                                                                  
-                                                                <div class="content">
-                                                                  <div class='img' align='center'>
+                                                                    <div class="content">
+                                                                  <div class='img'  >
                                                                       <br>
                                                                   <img src="storage/{{$offer->image }}" class='im' alt="">
 
 
                                                                   </div>
-                                                                  <div class="info">   
-                                                                       <h3><a href="{{ Route('products.show_product',  [$offer->id, $offer->slug])  }}">{{ $offer->name }} </a>
-</h3>
-
- 
-                                                              
-                                                              
-                                                              </div>
-                                                                  
-                                                                  </h5>
-                                                                  </div>
-                                      
+                                                                  <div class="info" >
+                                                                    <h1>
+                                                                        <a href="{{ Route('products.show_product',  [$offer->id, $offer->slug])  }}">{{ $offer->name }} </a>
+                                                                    </h1>
+                                                                    <div class="price" style="direction: ltr ;padding-top:10px;font-size:20px">
+                                                                        price <span>{{ Currency::format($offer->price) }}</span>
+                                                                        @if ($offer->compare_price>$offer->price)
+                                                                            <span class="discount-price">{{ Currency::format($offer->compare_price) }}</span>
                                                              
-                                                               
+                                                                        @endif
+                                                                    </div>
+                                                                     
+ 
+                                                                    <div class="button cart-button">
+                                                                        <a href="{{ Route('products.show_product',  [$offer->id, $offer->slug])  }}">
+                                                                        <button class="btn" type="submit" style="width: 100%;"> 
+                                                                            
+                                                                            Get this Offer 
+                                                                            @if ($offer->compare_price > $offer->price)
+                                                                            <span class="sale-tag">
+                                                                                Save({{$offer->sale_percent }}%)</span>
+                                                                            @endif
+                                                                        </button>
+                                                                    </a>
+                                                                    </div>
+                                                                     
+                                                                    </div>
                                                                 </div>
+                                                            </div>
                                                                 
                                                                 @endforeach
                                                                 <!-- End Single Slider -->
@@ -51,18 +63,18 @@
     </section>
     <!-- End Slider Area -->
 
-    <!-- Start Trending Product Area -->
+    <!-- Start Most viewed Area -->
     <section class="trending-product section">
               <div class="container">
                         <div class="row">
                                   <div class="col-12">
                                             <div class="section-title">
-                                                      <h2>Trending Product</h2>
+                                                      <h2>Most viewed  Products</h2>
                                             </div>
                                   </div>
                         </div>
                         <div class="row">
-                                  @foreach ($products as $product)
+                                  @foreach ($products_mostViewed as $product)
                                   <div class="col-lg-3 col-md-6 col-12">
                                             <x-frontend.product-card :product="$product" />
                                   </div>
@@ -72,31 +84,54 @@
     </section>
     <!-- End Trending Product Area -->
 
+       <!-- Start Trending Product Area -->
+       <section class="trending-product section">
+        <div class="container">
+                  <div class="row">
+                            <div class="col-12">
+                                      <div class="section-title">
+                                                <h2>Trending Product</h2>
+                                      </div>
+                            </div>
+                  </div>
+                  <div class="row">
+                            @foreach ($products as $product)
+                            <div class="col-lg-3 col-md-6 col-12">
+                                      <x-frontend.product-card :product="$product" />
+                            </div>
+                            @endforeach
+                  </div>
+        </div>
+</section>
+<!-- End Trending Product Area -->
     <!-- Start Brands Area -->
     <div class="brands" style="direction: ltr">
-              <div class="container">
-                        <div class="row">
-                                  <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
-                                            <h2 class="title">اهم التصنيفات  </h2>
-                                  </div>
-                        </div>
+        <div class="container">
+                  <div class="row">
+                            <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+                                <div class="section-title">
+                                    <h2>Categories</h2>
+                          </div>
+                                   
+                            </div>
+                  </div>
 
-                        <div class="brands-logo-wrapper">
-                                  <div
-                                            class="brands-logo-carousel d-flex align-items-center justify-content-between">
-                                            @foreach ($sup_categories as $sup_category)
-                                            <div class="brand-logo">
-                                                <a href="{{ Route('shop_grid.index', $sup_category->id) }}">
-                                                                <img src="{{ $sup_category->image_url }}" alt="#">
-                                                                <p>{{ $sup_category->name }}</p>
-                                                      </a>
-                                            </div>
-                                            @endforeach
-                                  </div>
-                        </div>
-              </div>
-    </div>
-    <!-- End Brands Area -->
+                  <div class="brands-logo-wrapper">
+                            <div
+                                      class="brands-logo-carousel d-flex align-items-center justify-content-between">
+                                      @foreach ($main_categories as $main_category)
+                                      <div class="brand-logo">
+                                          <a href="{{ Route('shop_grid.index', $main_category->id) }}">
+                                                          <img src="{{ $main_category->image_url }}" alt="#">
+                                                          <p>{{ $main_category->name }}</p>
+                                                </a>
+                                      </div>
+                                      @endforeach
+                            </div>
+                  </div>
+        </div>
+</div>
+<!-- End Brands Area -->
 
     <!-- Start Shipping Info -->
     <section class="shipping-info">

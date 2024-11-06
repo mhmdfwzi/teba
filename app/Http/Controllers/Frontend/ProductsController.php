@@ -18,6 +18,8 @@ class ProductsController extends Controller
     }
 
     // show product details
+
+   
     
     public function show($id , $slug){
         $product = Product::where('id',$id)->where('slug',$slug)->first(); 
@@ -71,6 +73,10 @@ class ProductsController extends Controller
         $cosmo = ProductVariant::where('product_id', '=', $product->id)
         ->where('attribute_id', '=', 7) 
         ->get();
+        
+        
+            $product->incrementViews();
+           // return view('products.show', compact('product'));
         
 
         if($product->status != 'active'){

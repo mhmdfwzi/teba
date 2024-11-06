@@ -67,9 +67,11 @@
                                 <label> {{ trans('destinations_trans.Parent') }}<span class="text-danger">*</span></label>
                                 <select name="parent_id" id="" class="custom-select mr-sm-2">
                                     <option disabled>أختار من القائمة </option>
+                                    <option value="">بدون</option>
                                     @foreach ($parents as $parent)
                                         <option value="{{ $parent->id }}">{{ $parent->name }}</option>
                                     @endforeach
+                                    
                                 </select>
                                 @error('parent_id')
                                     <div class="alert alert-danger">{{ $message }}</div>

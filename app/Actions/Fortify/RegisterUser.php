@@ -75,7 +75,7 @@ class RegisterUser implements CreatesNewUsers
     'phone_number' => $input['phone_number'],
     'governorate_id' => $input['governorate_id'],
     'city_id' => $input['city_id'],
-    'neighborhood_id' => $input['neighborhood_id'],
+    'neighborhood_id' => $input['city_id'],
     'street_address' => $input['street_address'],
     'remember_token' => Str::random(10),
     ]);
