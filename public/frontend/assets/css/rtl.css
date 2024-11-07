@@ -2555,13 +2555,14 @@ element.style {
 @media (max-width: 767px) {
   .header .nav-social, .header .category_menu {
     position: relative;
-    margin-top: -40px;
+    margin-top: -50px;
    
   }
   .header .navbar-cart {
-   
-    margin-left: 180px;
-    margin-top: -5px;
+    
+    margin-top: -45px;
+    margin-left: 7px;
+    display: inline;
   }
   .header .category_menu {
     display: none;
@@ -3861,7 +3862,7 @@ text-align: right;
   width: 60%;
   padding-top: 70px;
   min-height: 350px;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 255), rgb(228, 97, 136));
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 255), rgb(134 97 228))
 }
 .info .price .discount-price {
   margin: 0;
