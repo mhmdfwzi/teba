@@ -1811,9 +1811,9 @@ ol {
 }
 
 .header .navbar-cart .cart-items .main-btn {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
   display: inline-block;
   border-radius: 50%;
   border: 1px solid #eee;
@@ -3848,6 +3848,8 @@ text-align: right;
     min-height: 150px;
     background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255));
     padding-top: 10px;
+    max-width: 80%;
+    margin: auto;
 
    }
 
