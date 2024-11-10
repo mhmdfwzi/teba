@@ -69,7 +69,7 @@
                         <div class="row">
                                   <div class="col-12">
                                             <div class="section-title">
-                                                      <h2>Most viewed  Products</h2>
+                                                      <h2>Most viewed  Productss</h2>
                                             </div>
                                   </div>
                         </div>
@@ -110,7 +110,7 @@
                   <div class="row">
                             <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
                                 <div class="section-title">
-                                    <h2>Categories</h2>
+                                    <h2>Categoriesss</h2>
                           </div>
                                    
                             </div>
