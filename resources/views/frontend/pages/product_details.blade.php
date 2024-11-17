@@ -1,5 +1,4 @@
 <x-front-layout title="{{ $product->name }}">
-
     <x-slot name="breadcrumbs">
         <div class="breadcrumbs">
             <div class="container">

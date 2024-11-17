@@ -68,6 +68,28 @@
                     </li>
 
                     <!-- menu Stores -->
+
+                                <!-- menu Website Management-->
+                                <li>
+
+                                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#blogs">
+                                        <div class="pull-left"><i class="fa-solid fa-gear fa-fade"></i><span class="right-nav-text">
+                                                التدوينات</span></div>
+                                        <div class="pull-right"><i class="ti-plus"></i></div>
+                                        <div class="clearfix"></div>
+                                    </a>
+            
+                                    <ul id="blogs" class="collapse" data-parent="#blogs">
+                                      
+                                        <li> <a href="{{ Route('admin.blogsNews.index') }}">كل التدوينات</a>
+                                            <li> <a href="{{ route('admin.blogsNews.create') }}">أضافة مدونة   </a> </li>
+                                             
+                                         
+         
+                                    </ul>
+                                </li>
+            
+                                <!-- menu Stores -->
                     {{-- <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{ trans('sidebar_trans.Stores') }}
                     </li> --}}
 
@@ -445,6 +467,9 @@
                                 <div class="pull-right"><i class="ti-plus"></i></div>
                                 <div class="clearfix"></div>
                             </a>
+                            
+                            
+
                             <ul id="order-reports" class="collapse">
                                 <li> <a href="{{ route('admin.reports.orders') }}">{{ trans('sidebar_trans.All_Orders') }}
                                     </a>
@@ -468,9 +493,11 @@
                                         href="{{ route('admin.reports.orders', ['refunded']) }}">{{ trans('sidebar_trans.Refunded_Orders') }}</a>
                                 </li>
                             </ul>
+                            
                         </li>
 
                     </ul>
+                    
                 </li>
 
 
@@ -708,6 +735,8 @@
 
                 </ul>
                 </li>
+                  
+                
                 </ul>
             </div>
         </div>

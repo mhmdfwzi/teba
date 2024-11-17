@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\ReviewsController;
 use App\Http\Controllers\Frontend\SendOTPController;
 use App\Http\Controllers\Frontend\ShopGridController;
+use App\Http\Controllers\Frontend\BlogsNewsController;
 use App\Models\job;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -83,6 +84,10 @@ Route::group([
     Route::get('/offers_store/{storeId?}', [OffersController::class, 'store'])->name('offers.store');
 
 
+    Route::get('/blogsNews', [BlogsNewsController::class,'blogsNews'])->name('blogsNews');
+    Route::get('/blogNewsDetails/{id}', [BlogsNewsController::class,'blogsNewsDetails'])->name('blogNewsDetails');
+    
+    
 
 
 });

@@ -129,7 +129,7 @@ video {
 @media only screen and (max-width:992px) {
     .container {
         padding: 0 1rem;
-        margin: 15px auto
+        margin: 3px auto
     }
 
 }
@@ -382,7 +382,7 @@ video {
 
 .header-item-right a:hover,
 .header .menu>ul>li:hover>a {
-    color:hsl(118, 89%, 28%)
+    color:hsl(349.71deg 93.91% 46%)
 }
 
 @media only screen and (min-width:993px) {
@@ -720,7 +720,7 @@ video {
         margin-left: 100px;
     }
     .header .header-item-center{
-        margin-left: 100px;
+        margin-left: 50px;
     }
 }
 

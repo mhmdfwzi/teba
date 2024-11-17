@@ -193,7 +193,7 @@
 
                                             @php
                                                 $user = Auth::user();
-                                                $neighborhood_shipping = $user->neighborhood->price;
+                                                $neighborhood_shipping = $user->city->price;
                                                 $shipping_fees = 0;
                                                 $storeIds = [];
 

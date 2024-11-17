@@ -39,10 +39,10 @@
                                                                         <a href="{{ Route('products.show_product',  [$offer->id, $offer->slug])  }}">
                                                                         <button class="btn" type="submit" style="width: 100%;"> 
                                                                             
-                                                                            Get this Offer 
+                                                                            احصل على هذا العرض 
                                                                             @if ($offer->compare_price > $offer->price)
                                                                             <span class="sale-tag">
-                                                                                Save({{$offer->sale_percent }}%)</span>
+                                                                                وفر({{$offer->sale_percent }}%)</span>
                                                                             @endif
                                                                         </button>
                                                                     </a>
@@ -69,7 +69,7 @@
                         <div class="row">
                                   <div class="col-12">
                                             <div class="section-title">
-                                                      <h2>Most viewed  Products</h2>
+                                                      <h2 >المنتجات الاكثر مشاهدة</h2>
                                             </div>
                                   </div>
                         </div>
@@ -90,7 +90,7 @@
                   <div class="row">
                             <div class="col-12">
                                       <div class="section-title">
-                                                <h2>Trending Product</h2>
+                                                <h2>رشحنا لك هذه المنتجات</h2>
                                       </div>
                             </div>
                   </div>
@@ -110,7 +110,7 @@
                   <div class="row">
                             <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
                                 <div class="section-title">
-                                    <h2>Categories</h2>
+                                    <h2>التصنيفات</h2>
                           </div>
                                    
                             </div>

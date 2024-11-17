@@ -25,9 +25,9 @@ use  App\Http\Controllers\Backend\Admin\{
     DeliveryController,
     PaymentGatewayController,
     ProductPropertiesController,
-    ReportsController
+    ReportsController,
 };
-
+use App\Http\Controllers\Backend\Admin\BlogsNewsController ;
 use  App\Http\Controllers\Backend\Vendor\{
 
     DashboardController as VendorDashboardController,
@@ -106,6 +106,16 @@ Route::group(
 
         Route::resource('/destinations', DestinationController::class);
 
+
+        Route::group([], function () {
+          Route::get('blogs_news', [BlogsNewsController::class,'index'])->name('blogsNews.index');
+          Route::get('blogs_news/create', [BlogsNewsController::class,'create'])->name('blogsNews.create');
+          Route::post('blogs_news/store', [BlogsNewsController::class,'store'])->name('blogsNews.store');
+          Route::get('blogs_news/edit/{id}', [BlogsNewsController::class,'edit'])->name('blogsNews.edit');
+          Route::put('blogs_news/update/{id}', [BlogsNewsController::class,'update'])->name('blogsNews.update');
+          Route::delete('blogs_news/destroy/{id}', [BlogsNewsController::class,'destroy'])->name('blogsNews.destroy');
+      });
+      
         Route::resource('/vendors', VendorController::class);
         Route::put('/updateVendorStatus/{vendor_id}', [VendorController::class, 'updateVendorStatus'])->name('vendors.updateVendorStatus');
 
@@ -178,10 +188,7 @@ Route::group([
 
       Route::put('/update_products_price', [VendorProductsController::class,'updateProductsPrice'])->name('products.update_products_price');
 
-      // Route::get('/add_variant/{product_id}', [VendorProductsController::class, 'add_variant'])->name('products.add_variant');
-
-      // Route::resource('/product_variants', VendorProductVariantsController::class);
-
+     
       Route::get('/product_variant', [VendorProductVariantsController::class, 'index'])->name('product_variants.index');
       Route::get('/create_product_variant/{product_id}', [VendorProductVariantsController::class, 'create'])->name('product_variants.create');
       Route::post('/store_product_variant', [VendorProductVariantsController::class, 'store'])->name('product_variants.store');
@@ -258,4 +265,8 @@ Route::group([
 
       Route::get('/admin_full_reports/{date?}', [DeliveryReportsController::class,'adminFullReport'])->name('reports.adminFullReport');
 
+
+      
+ 
+ 
   });

@@ -119,7 +119,7 @@
 
     <!-- Start Header Area -->
     <header class="header">
-        <div class="container">
+        <div class="container" >
             <div class="wrapper">
                 <div class="header-item-left">
                     <a class="navbar-brand" href="{{ Route('home') }}">
@@ -183,6 +183,8 @@
                             </li>
 							<li><a href="{{ Route('offers.index') }}">العروض</a></li>
           					<li class="nav-item"><a href="{{ Route('shop_grid.index') }}"> معرض المنتجات</a></li>
+                              <li class="nav-item"><a href="{{ Route('blogsNews') }}"> المدونه  </a></li>
+
 
                               <li class="menu-item-has-children">
                                 <a href="#">التصنيفات <i class="ion ion-ios-arrow-down"></i></a>
