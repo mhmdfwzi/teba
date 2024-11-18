@@ -9746,7 +9746,9 @@ span.CodeMirror-selectedtext {
 
 .note-popover .popover-content, .panel-heading.note-toolbar {
   padding: 0 0 5px 5px;
-  margin: 0; }
+  margin: 0; 
+  text-align: left;
+}
 
 .note-popover .popover-content > .btn-group, .panel-heading.note-toolbar > .btn-group {
   margin-top: 5px;

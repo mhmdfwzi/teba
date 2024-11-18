@@ -1,38 +1,16 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Include common scripts used in most of your views -->
-<script src="{{ asset('backend/assets/js/plugins-jquery.js') }}"></script>
+ 
 <script>
     var plugin_path = '{{ asset('backend/assets/js/') }}';
 </script>
 <script src="{{ asset('backend/assets/js/datepicker.js') }}" defer></script>
-{{-- <script src="{{ asset('backend/assets/js/toastr.js') }}"></script> --}}
-{{-- <script src="{{ asset('backend/assets/js/validation.js') }}" defer></script> --}}
 <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
-<script src="{{ asset('backend/assets/js/summernote-lite.min.js') }}" defer></script>
 
 <script>
     const userID = "{{ auth('admin')->id() }}";
     console.log(userID);
 </script>
 
-<script>
-    // Initialize the summernote editor
-    $('#summernote').summernote({
-        placeholder: 'Hello ..!',
-        tabsize: 2,
-        height: 120,
-        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
-            ['insert', ['link', 'video']],
-            ['view', ['codeview', 'help']]
-        ]
-    });
-</script>
+ 
 
 {{-- @include('sweetalert::alert') --}}
 
@@ -44,7 +22,7 @@
     @endif
 </script>
 
-
+ 
 @if (request()->routeIs('admin.brands.index') ||
         request()->routeIs('admin.categories.index') ||
         request()->routeIs('admin.stores.index') ||
@@ -63,6 +41,9 @@
         request()->routeIs('admin.websiteParts.index') ||
         request()->routeIs('admin.banners.index') ||
         request()->routeIs('admin.paymentGateways.index') ||
+        request()->routeIs('admin.blogNews.index') ||
+        request()->routeIs('admin.blogNews.create') ||
+        request()->routeIs('admin.blogNews.edit') ||
         request()->routeIs('delivery.orders.index') ||
         request()->routeIs('delivery.orders.reports') ||
         request()->routeIs('delivery.deliveredOrders.reports') ||
@@ -85,87 +66,7 @@
     <script src="{{ asset('backend/assets/datatables/export-tables/buttons.print.min.js') }}" defer></script>
 @endif
 
-
-
-{{-- @if (request()->routeIs('admin.brands.create') ||
-    request()->routeIs('admin.brands.edit') ||
-    request()->routeIs('admin.categories.create') ||
-    request()->routeIs('admin.categories.edit') ||
-    request()->routeIs('admin.stores.create') ||
-    request()->routeIs('admin.stores.edit') ||
-    request()->routeIs('admin.vendors.create') ||
-    request()->routeIs('admin.vendors.edit') ||
-    request()->routeIs('admin.products.create') ||
-    request()->routeIs('admin.products.edit') ||
-    request()->routeIs('admin.product_variants.create') ||
-    request()->routeIs('admin.orders.create') ||
-    request()->routeIs('admin.deliveries.create') ||
-    request()->routeIs('admin.product_properties.create') ||
-    request()->routeIs('admin.attributes.create') ||
-    request()->routeIs('admin.attribute_values.create') ||
-    request()->routeIs('admin.coupons.create') ||
-    request()->routeIs('admin.roles.create') ||
-    request()->routeIs('admin.admins.create') ||
-    request()->routeIs('admin.reports.orders') ||
-    request()->routeIs('admin.websiteParts.create') ||
-    request()->routeIs('admin.banners.create') ||
-    request()->routeIs('delivery.orders.create'))
-@endif --}}
-
-{{-- 
-    @if (App::getLocale() == 'ar')
-        <script>
-            $(document).ready(function() {
-
-                var datatable = $('#custom_table').DataTable({
-                    stateSave: true,
-                    sortable: true,
-                    dom: 'Bfrtip',
-                    buttons: [
-                        'copy', 'excel', 'print'
-                    ]
-                    // responsive: true,
-                    // oLanguage: {
-                    //     sZeroRecords: 'لا يوجد سجل متتطابق',
-                    //     sEmptyTable: 'لا يوجد بيانات في الجدول',
-                    //     oPaginate: {
-                    //         sFirst: "First",
-                    //         sLast: "الأخير",
-                    //         sNext: "التالى",
-                    //         sPrevious: "السابق"
-                    //     },
-                    // },
-
-                });
-            });
-        </script>
-    @else
-        <script>
-            $(document).ready(function() {
-                $('#custom_table').DataTable({
-                    stateSave: true,
-                    sortable: true,
-                    dom: 'Bfrtip',
-                    buttons: [
-                        'copy', 'excel', 'print'
-                    ]
-                    // responsive: true,
-                    // oLanguage: {
-                    //     sZeroRecords: 'No matching records found',
-                    //     sEmptyTable: 'No data available in table',
-                    //     oPaginate: {
-                    //         sFirst: "First",
-                    //         sLast: "Last",
-                    //         sNext: "Next",
-                    //         sPrevious: "Previous"
-                    //     },
-                    // },
-
-                });
-            });
-        </script>
-    @endif 
---}}
+ 
 
 
 
