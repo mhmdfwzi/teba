@@ -229,87 +229,71 @@
                                
                             </div>
                         </div>
-                    </div>
-                       <div class="col-md-4">
-                            <div class="form-group">
-                                <label>{{ trans('products_trans.Offer') }}<span class="text-danger">*</span></label>
-
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="offer" value="1">
-                                    <label class="form-check-label">
-                                       عرض
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="offer" value="0"
-                                        checked>
-                                    <label class="form-check-label">
-                                       ليس عرض
-                                    </label>
-                                </div>
-
-                                @error('offer')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-					<div class="row">
+                    </div><div class="row">
                         <div class="col-md-6">
         <div class="form-group">
-            <label>وحده / وزن <span
+            <label> Offer/Not Offer  <span
                 class="text-danger">*</span></label>
-        <select name="measure" id="" class="custom-select mr-sm-2" required>
-			       <option value="{{$product->measure}}">
-            @if($product->measure=="unite") {{"وحده"}}
-            @elseif($product->measure=="kg") {{"وزن بالكيلو"}}
-            @else {{"وزن بالجرام"}}
+        <select name="offer" id="" class="custom-select mr-sm-2" required>
+                   <option value="{{$product->offer}}">
+            @if($product->offer=="0") {{"not offer"}}
+            @elseif($product->offer=="1") {{" offer"}}
             @endif
         </option>
-            <option value="unite">وحده</option>
-            <option value="kg">وزن بالكيلو</option>
-            <option value="gram">وزن بالجرام</option>
-              
+            <option value="0">not offer</option>
+            <option value="1"> offer</option>
         </select>
-                  
-            </select>
-            @error('measure')
+            @error('offer')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
     </div>
 </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>{{ trans('products_trans.Status') }}<span class="text-danger">*</span></label>
 
-                                {{-- <x-backend.form.radio name="status" :options="
-                                ['active'=>'Active','inactive'=>'Inactive']" /> --}}
+                <div class="row">
+                    <div class="col-md-6">
+    <div class="form-group">
+        <label>وحده / وزن <span
+            class="text-danger">*</span></label>
+    <select name="measure" id="" class="custom-select mr-sm-2" required>
+               <option value="{{$product->measure}}">
+        @if($product->measure=="unite") {{"وحده"}}
+        @elseif($product->measure=="kg") {{"وزن بالكيلو"}}
+        @else {{"وزن بالجرام"}}
+        @endif
+    </option>
+        <option value="unite">وحده</option>
+        <option value="kg">وزن بالكيلو</option>
+        <option value="gram">وزن بالجرام</option>
+    </select>
+        @error('measure')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+    </div>
+</div>
+</div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="active"
-                                        @checked($product->status == 'active')>
-                                    <x-backend.form.label class="form-check-label"
-                                        label="{{ trans('products_trans.Active') }}" />
-
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="inactive"
-                                        @checked($product->status == 'inactive')>
-                                    <x-backend.form.label class="form-check-label"
-                                        label="inactive" />
-
-                                </div>
- 
-                                @error('status')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label> Status <span
+class="text-danger">*</span></label>
+<select name="status" id="" class="custom-select mr-sm-2" required>
+<option value="{{$product->status}}">
+@if($product->status=="active") {{"active"}}
+@elseif($product->status=="inactive") {{" inactive"}}
+@endif
+</option>
+<option value="active">active</option>
+<option value="inactive"> inactive</option>
+</select>
+@error('status')
+<div class="alert alert-danger">{{ $message }}</div>
+@enderror
+</div>
+</div>
+</div>
 
 
                     {{-- Image input --}}
