@@ -3898,7 +3898,7 @@ text-align: right;
   width: 60%;
   padding-top: 70px;
   min-height: 350px;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 255), rgb(241, 63, 110))
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 255), rgb(134 97 228));
 }
 .info .price .discount-price {
   margin: 0;
