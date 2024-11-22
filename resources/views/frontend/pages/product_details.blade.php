@@ -1,4 +1,8 @@
 <x-front-layout title="{{ $product->name }}">
+    @section('Page-Title'){{$product->name}}@endsection 
+    @section('Page-url')products/{{$product->id}}/{{$product->slug}}@endsection    
+    @section('Page-image'){{$product->image_url_pd}}@endsection 
+    @section('Page-price'){{$product->price}}@endsection 
     <x-slot name="breadcrumbs">
         <div class="breadcrumbs">
             <div class="container">

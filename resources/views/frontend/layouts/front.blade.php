@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{{ $title }}</title>
-    <meta name="description" content="{{ $title }}" />
-    <meta name="keyword" content="{{ $title }}" />
+    <meta name="robots" content="index, follow" />
+    <title>{{ config('app.name') }} | {{ $title }}</title>    
+    <meta name="description" content="{{ config('app.name') }} | {{ $title }}" />
+    <meta name="keyword" content="{{ config('app.name') }} | {{ $title }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/icon.ico') }}" />
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/icon.ico') }}" />    
+    <!-- Add Open Graph metadata for social media sharing      </title>-->
+    <link rel="canonical" href="https://tebaoptics.com/en/@yield('Page-url')">
+    <meta property="og:title" content="{{ config('app.name') }} | @yield('Page-Title')">
+    <meta property="og:description" content="@yield('Page-Title')">
+    <meta property="og:url" content="https://tebaoptics.com/en/@yield('Page-url')">
+    <meta property="og:type" content="product"> 
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:updated_time" content="@yield('Page-updated_time')">
+    <meta property="og:image" content="@yield('Page-image')">
+    <meta property="og:image:secure_url" content="@yield('Page-image')">
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="{{ config('app.name') }} | @yield('Page-Title')">
+    <meta property="og:image:type" content="image/jpg">    
+    <meta property="product:price:amount" content="@yield('Page-price')" />
+    <meta property="product:price:currency" content="EGP" />
+    <!-- Add Twitter Card metadata for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ config('app.name') }}">
+    <meta name="twitter:title" content="{{ config('app.name') }} | @yield('Page-Title')">
+    <meta name="twitter:description" content="{{ config('app.name') }} | @yield('Page-Title')">
+    <meta name="twitter:image" content="@yield('Page-image')">
+    <meta name="twitter:url" content="https://tebaoptics.com/en/@yield('Page-url')"> 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }} " />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/LineIcons.3.0.css') }}" />
