@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-<head>
+    <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="robots" content="index, follow" />
