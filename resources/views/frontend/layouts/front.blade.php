@@ -19,8 +19,6 @@
     <meta property="og:updated_time" content="@yield('Page-updated_time')">
     <meta property="og:image" content="@yield('Page-image')">
     <meta property="og:image:secure_url" content="@yield('Page-image')">
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="{{ config('app.name') }} | @yield('Page-Title')">
     <meta property="og:image:type" content="image/jpg">    
     <meta property="product:price:amount" content="@yield('Page-price')" />

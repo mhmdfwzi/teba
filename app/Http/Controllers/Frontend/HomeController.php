@@ -18,7 +18,7 @@ class HomeController extends Controller
         $main_categories = Category::where('status','=','active')-> where('parent_id', '=', null)->get();
         $sup_categories = Category::where('status','=','active')-> where('parent_id','!=','null')->get();
         $stores = Store::where('status','=','active')->get();
-        $offers = Product::where('status', 'active')->where('offer',1)->take(8)->get();
+        $offers = Product::where('status', 'active')->where('offer',1)->take(8)->latest()->get();
         $products_mostViewed = Product::orderBy('views', 'desc')->take(8)->get();
     
 
