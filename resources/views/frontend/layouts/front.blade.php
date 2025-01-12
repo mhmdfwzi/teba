@@ -91,13 +91,14 @@
 
     @stack('styles')
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYZ6QV4TMV"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV5W7C5SZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-FYZ6QV4TMV');
+  gtag('config', 'G-GRV5W7C5SZ');
 </script>
 
 </head>
