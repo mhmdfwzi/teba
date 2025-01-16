@@ -13,11 +13,11 @@ trait sendWhatsAppMessage
     {
 
 
-        $url = 'https://server.rhmany.com/api/send/message';
+        $url = 'https://api.ultramsg.com/instance57432/messages/chat';
         $params = [
-            'device_id' => 'a434a3a7-9280-4810-b538-005b38a02c14',
+            'token' => 'attxuntrmg0kw75g',
             'to' => $phone_number,
-            'message' =>  $messageBody, // Modify the message as needed
+            'body' => $messageBody, // Modify the message as needed
         ];
 
         $response = Http::post($url, $params);

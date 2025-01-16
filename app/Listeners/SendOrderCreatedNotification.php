@@ -69,7 +69,7 @@ class SendOrderCreatedNotification
 
     private function generateMessage($order)
     {
-        $message = 'aliafandy';
+        $message = 'TebaOPtics';
         $message .= ' طلب رقم  : ' . $order->number . "\n";
         $message .= 'أسم المحل: ' . $order->store->name . "\n";
         return $message;

@@ -22,7 +22,7 @@ trait SendVerifications
         $params = [
             'token' => 'attxuntrmg0kw75g',
             'to' => $phone_number,
-            'body' => 'كود تفعيل الحساب: ' . $otp . ' scalechem نسعد بخدمتك', // Modify the message as needed
+            'body' => 'كود تفعيل الحساب: ' . $otp . ' TebaOptics نسعد بخدمتك', // Modify the message as needed
         ];
 
         $response = Http::post($url, $params);
