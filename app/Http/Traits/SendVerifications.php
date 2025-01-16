@@ -18,11 +18,11 @@ trait SendVerifications
 
         // dd($phone_number ,$otp);
 
-        $url = 'https://api.ultramsg.com/instance92960/messages/chat';
+        $url = 'https://server.rhmany.com/api/send/message';
         $params = [
-            'token' => 'ppqmpkzjiwqjeo1i',
+            'device_id' => 'a434a3a7-9280-4810-b538-005b38a02c14',
             'to' => $phone_number,
-            'body' => 'كود تفعيل الحساب: ' . $otp . ' scalechem نسعد بخدمتك', // Modify the message as needed
+            'message' => 'كود تفعيل الحساب: ' . $otp . ' TebaOptics نسعد بخدمتك', // Modify the message as needed
         ];
 
         $response = Http::post($url, $params);
