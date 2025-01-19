@@ -22,7 +22,7 @@ trait SendVerifications
         $params = [
             'device_id' => 'a434a3a7-9280-4810-b538-005b38a02c14',
             'to' => $phone_number,
-            'body' => 'كود تفعيل الحساب: ' . $otp . ' TebaOptics نسعد بخدمتك', // Modify the message as needed
+            'message' => 'كود تفعيل الحساب: ' . $otp . ' TebaOptics نسعد بخدمتك', // Modify the message as needed
         ];
 
         $response = Http::withHeaders([
