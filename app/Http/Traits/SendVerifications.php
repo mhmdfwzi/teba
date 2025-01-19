@@ -18,15 +18,17 @@ trait SendVerifications
 
         // dd($phone_number ,$otp);
 
-        $url = 'https://api.ultramsg.com/instance57432/messages/chat';
+        $url = 'https://server.rhmany.com/api/send/message';
         $params = [
-            'token' => 'attxuntrmg0kw75g',
+            'device_id' => 'a434a3a7-9280-4810-b538-005b38a02c14',
             'to' => $phone_number,
             'body' => 'كود تفعيل الحساب: ' . $otp . ' TebaOptics نسعد بخدمتك', // Modify the message as needed
         ];
 
-        $response = Http::post($url, $params);
-
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+        ])->post($url, $params);
+        return $response->json();
         // Check if the request was successful
         if ($response->successful()) {
             // OTP sent successfully
