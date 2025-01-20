@@ -14,7 +14,7 @@ trait sendWhatsAppMessage
 
         $url = 'https://server.rhmany.com/api/send/message';
         $params = [
-            'device_id' => 'a434a3a7-9280-4810-b538-005b38a02c14',
+            'device_id' => '6f799d04-9f4b-4b7d-b6fd-9fa20cef2f61',
             'to' => $phone_number,
             'message' => $messageBody, // Modify the message as needed
         ];
